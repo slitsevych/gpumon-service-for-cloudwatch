@@ -1,8 +1,0 @@
-
-sudo su
-
-aws s3 cp s3://newrow-gpumon/gpumon.py /usr/local/lib/
-aws s3 cp s3://newrow-gpumon/gpumon.service /etc/systemd/system/
-
-yum -y install python3
-pip3 install boto3 urllib3 pynvml

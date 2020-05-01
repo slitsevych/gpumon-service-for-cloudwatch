@@ -1,0 +1,12 @@
+[Unit]
+Description=GPU Monitoring
+After=multi-user.target
+
+[Service]
+Type=idle
+Restart=on-failure
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python2 /usr/local/lib/gpumon.py &
+
+[Install]
+WantedBy=multi-user.target
